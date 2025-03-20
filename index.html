@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>SSAATT</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="scrypt.js"></script>
+    <header>
+        <h1> SSAATT subject blog</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="nav-home"><a href="#home-section" data-section="home-section">Home</a></li>
+            <li id="nav-register"><a href="#register-section" data-section="register-section">Register</a></li>
+            <li id="nav-blog"><a href="#blog-section" data-section="blog-section">Blog</a></li>
+            <li id="nav-new-entry"><a href="#new-entry-section" data-section="new-entry-section">New entry</a></li>
+            <li id="nav-about"><a href="#about-section" data-section="about-section">About...</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home-section">
+            <h2>Home</h2>
+            <form id="home-form">
+                <label for="username">User</label>
+                <input type="text" name="username" id="username" minlength="4" maxlength="16" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" minlength="4" maxlength="16" required>
+                <input type="submit" value="Log In">
+            </form>
+            <aside id="aside-home">
+                <p> Introduce your credentials </p>
+                <p class="error-message" id="home-error"></p>
+            </aside>
+        </section>
+        <section id="register-section">
+            <h3> Register </h3>
+            <form id="register-form">
+                <label for="username">Nickname</label>
+                <input type="text" name="username" id="username" minlength="4" maxlength="16" required>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" minlength="3" maxlength="20" required>
+                <label for="surnname">Surname</label>
+                <input type="text" name="surname" id="surname" minlength="3" maxlength="20" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"  required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" minlength="4" maxlength="16" required>
+                <label for="check-password">Confirm password</label>
+                <input type="password" name="check-password" id="checkpassword" minlength="4" maxlength="16" required>
+                <input type="submit" value="Register">
+            </form>
+            <aside id="aside-register">
+                <p>This section allows you to create a new user account.</p>
+                <p class="error-message" id="register-error"></p>
+            </aside>
+        </section>
+        <section id="blog-section">
+            <h4>My Blog Entries</h4>
+            <button id="load-post">Load Post</button>
+            <ul id="blog-list"></ul>
+            <aside id="aside-blog">
+                <p>Here you can see all your blog posts if you are logged in.</p>
+                <p class="error-message" id="blog-error"></p>
+            </aside>
+        </section>
+        <section id="new-entry-section">
+            <h5>Create a New Blog Entry</h5>
+            <form id="new-entry-form">
+                <label for="title"> Title </label>
+                <input type="text" name="title" id="title" minlength="5" maxlength="100" required>
+                <label for="date"> Date </label>
+                <input type="date" name="date" id="date"  required>
+                <label for="comment"> Comment </label>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+                <input type="submit" value="Publish">
+            </form>
+            <aside id="new-entry-aside">
+                <p>Fill in the fields to create a new blog post.</p>
+                <p class="error-message" id="new-entry-error"></p>
+            </aside>
+        </section>
+        <section id="about-section">
+            <h6>About</h6>
+            <img src="uja-logo.png" alt="uja-logo" width="300">
+            <p>This project was developed by Chernov Yaroslav for the SSAATT subject, academic year 2024/2025. Go to <a href="https://platea.ujaen.es/">PLATEA</a></p>
+            <p></p>
+            <aside id="about-aside">
+                <p>This section is always accessible, regardless of authentication.</p>
+            </aside>
+        </section>
+        <footer>
+            <p>Author: Chernov Yaroslav</p>
+            <p>Subject: Servicios y Aplicaciones de Telematica</p>
+            <p>Ingineering of Telecomunication</p>
+        </footer>
+    </main>
+</html>
